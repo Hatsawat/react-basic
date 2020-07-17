@@ -7,12 +7,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
+    NavLink
 } from 'reactstrap';
 
 const Header = (props) => {
@@ -21,27 +16,27 @@ const Header = (props) => {
     const toggle = () => setIsOpen(!isOpen);
     return (
         <div>
-            <Navbar color="light" light expand="md">
-                <NavbarBrand> <Link to="/">Hatsawat</Link></NavbarBrand>
+            <Navbar color="success" dark expand="md">
+                <NavbarBrand tag={Link} to="/">Hatsawat</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink ><Link to='/about'>เกี่ยวกับเรา </Link></NavLink>
+                            <NavLink tag={Link} to='/about'>เกี่ยวกับเรา </NavLink>
                         </NavItem>
                         <NavItem>
-                        <NavLink ><Link to='/contact'>ติดต่อเรา </Link></NavLink>
+                            <NavLink tag={Link} to='/contact'>ติดต่อเรา </NavLink>
                         </NavItem>
                         <NavItem>
-                        <NavLink ><Link to='/profile'>ข้อมูลส่วนตัว </Link></NavLink>
+                            <NavLink tag={Link} to='/profile'>ข้อมูลส่วนตัว </NavLink>
                         </NavItem>
                     </Nav>
-                    <Nav className="ml-auto"navbar>
+                    <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink><Link to='/signin'>เข้าสู่ระบบ </Link></NavLink>
+                            <NavLink tag={Link} to='/signin'>เข้าสู่ระบบ </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink><Link to='/signup'>สมัครสมาชิก</Link></NavLink>
+                            <NavLink tag={Link} to='/signup'>สมัครสมาชิก</NavLink>
                         </NavItem>
                     </Nav>
 
